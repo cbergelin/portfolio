@@ -1,0 +1,85 @@
+.header__about{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "headrubrik aboutbilder"
+    "abouttext aboutbilder"
+    "abouttext aboutbilder"
+    ;
+    margin-left: 20px;
+
+
+.header__rubrik{
+    margin-top: 100px;
+}
+
+#about__text{
+    font-size: 1rem;
+    grid-area: abouttext;
+    margin-top: -100px;
+}
+
+.about__images{
+grid-area: aboutbilder;
+
+}
+.about__images li{
+    list-style: none;
+}
+
+.about__images img{
+    height: 200px;
+    width: 200px;
+    border: solid 3px white;
+}
+
+}
+
+
+@media only screen and (max-width: 1000px){
+    .header__about{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "headrubrik . ."
+        "abouttext abouttext abouttext"
+        "aboutbilder aboutbilder aboutbilder";
+        margin-left: 20px;
+        row-gap: 5px;
+
+    .about__images li{
+        display: inline;
+        list-style: none;
+    }
+
+    #about__text{
+        margin-top: -150px;
+    }
+}
+}
+
+@media only screen and (max-width: 600px){
+    .header__about{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "headrubrik . ."
+        "abouttext abouttext abouttext"
+        "aboutbilder aboutbilder aboutbilder";
+        margin-left: 20px;
+        row-gap: 5px;
+
+.about__images{
+    margin-top: -130px;
+}
+
+    .about__images li{
+        display: inline;
+        list-style: none;
+    }
+
+}
+}

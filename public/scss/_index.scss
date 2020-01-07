@@ -1,11 +1,10 @@
 .header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     "headrubrik ."
     "headtext ."
-    ". ."
     ". ."
     ". ."
     ". .";
@@ -19,7 +18,7 @@
         
     }
 
-    p{
+    #index__text{
         font-size: 1.5rem;
         margin-top: 5px;
         grid-area: headtext;
@@ -30,3 +29,15 @@
     margin-top: 50px;
 }
 
+@media only screen and (max-width: 600px){
+    .header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "headrubrik ."
+        "headtext ."
+        ". ."
+       ;
+    }
+}
